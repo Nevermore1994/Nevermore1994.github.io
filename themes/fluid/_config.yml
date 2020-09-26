@@ -114,8 +114,8 @@ aplayer:  # 音乐播放器，注意不能与 hexo-tag-aplayer 插件共用
   order: 'random'  # 播放顺序，可选值: 'list', 'random'
   theme: '#b7daff'  # 主题色
   songs:  # 歌曲列表，必须传入下列各参数，其中 url 与 cover 在本地需存于 source 目录，更多参数见文档：https://aplayer.js.org/#/zh-Hans/?id=%E5%8F%82%E6%95%B0
-    - { name: '南方', artist: '达达乐队', url: '/songs/nanfang.mp3', cover: '/img/default.png' }
-    - { name: 'Wish You Were Here', artist: 'Pink Floyd', url: '/songs/Wish You Were Here.mp3', cover: '/img/default.png' }
+    - { name: '南方', artist: '达达乐队', url: '/song/nanfang.mp3', cover: '/img/default.png' }
+    - { name: 'Wish You Were Here', artist: 'Pink Floyd', url: '/song/Wish You Were Here.mp3', cover: '/img/default.png' }
 
 version:  # 主题版本相关
   check: false  # 每次生成页面后，检测主题是否为最新版本
@@ -223,11 +223,11 @@ post:  # 部分配置同时控制自定义页面，注意备注
       format: "{} 分钟"
       words: 100  # 每分钟阅读多少字，如果是技术文章，建议降低
     views:  # 阅读次数
-      enable: false
+      enable: true
       source: "busuanzi"  # 统计数据来源，可选：busuanzi | leancloud，使用 leancloud 需要在 web_analytics 中设置 api 参数，使用 busuanzi 注意可能间歇抽风
       format: "{} 次"
   updated:  # 在文章开头显示文章更新时间，该时间默认是 md 文件更新时间，可通过 front-matter 中 `updated` 手动指定（和 date 一样格式）
-    enable: false
+    enable: true
     content: 本文最后更新于：  # 描述文字
     relative: false  # 是否使用相对时间表示，比如："3 天前"
   toc:  # 文章右侧目录
@@ -383,7 +383,7 @@ tag:
 # About Page
 #---------------------------
 about:  # 关于页需要手动创建，具体请见：https://hexo.fluid-dev.com/docs/guide/#%E5%85%B3%E4%BA%8E%E9%A1%B5
-  banner_img: /img/default.jpg
+  banner_img: /img/default.png
   banner_img_height: 60  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   subtitle:  # 打字机内容
